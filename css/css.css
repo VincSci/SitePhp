@@ -1,0 +1,51 @@
+li{
+    border-right: none;
+	text-align: center; 
+  }
+  
+body {
+	font-size: 23px;
+    background-color: #B195CF;
+	margin-left: 100px;
+}
+
+h1, h3, h4, h5 {
+  color: #B03A2E;
+  text-align: center;
+}
+
+a {
+	color: #0010A3;
+	text-align: center;
+}
+
+b {
+	font-size:20px; 
+	position: relative; 
+	left: 500px
+}
+
+div {
+	text-align: center;
+	margin-left: 100px;
+}
+
+table {
+  border-collapse: collapse;
+  border: 3px solid black;
+  margin-left: 100px;
+  width:100%;
+}
+
+table tr,table th,table td {
+	border:1px solid black;
+}
+
+table tr td {
+	text-align:center;
+	padding:1em;
+}
+
+th, td {
+  border: 3px solid black;
+}
