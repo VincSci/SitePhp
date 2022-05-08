@@ -15,9 +15,9 @@ session_start();
 $mat = $_SESSION['mat'];
 
 echo "<table>";
-echo "<tr><th>Nombre d'Intervention</th><th>Kilometre Effectuer</th></tr>";
+echo "<tr><th>Nombre d'Intervention</th><th>Kilometre Effectuer</th><th>Durée Total Effectuer</th></tr>";
 	echo "<tr>";
-	echo"<td>".$NbrInter['COUNT(intervention.NumeroIntervention)']."</td> <td>".$NbrKil['SUM(client.DistanceKm)']."</td>
+	echo"<td>".$NbrInter['COUNT(intervention.NumeroIntervention)']."</td> <td>".$NbrKil['SUM(client.DistanceKm)']."</td> <td>".$duree['SUM(TIMEDIFF(HeureFinVisite, HeureDebVisite))']."</td>
 	</tr>"; 
 echo "</table>";
 

@@ -6,7 +6,7 @@
 	<link href="../css/css.css" rel="stylesheet" type="text/css">
 </head>
 
-<?php 
+<?php
 session_start();
 $mat = $_SESSION['mat'];
 ?>

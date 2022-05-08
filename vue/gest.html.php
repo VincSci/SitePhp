@@ -7,9 +7,10 @@
 </head>
 <body>
 
-<?php 
+<?php
 session_start();
 $mat = $_SESSION['mat'];
+
 ?>
 
 <h3>Gestionnaire</h3>

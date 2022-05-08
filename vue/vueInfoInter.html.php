@@ -21,10 +21,10 @@
 <br />
 <br />
 <?php
-include '../modele/bdd.con.php';
-
 session_start();
 $mat = $_SESSION['mat'];
+
+include '../modele/bdd.con.php';
 
 if(isset($_POST['recherche_valeur'])){
 				

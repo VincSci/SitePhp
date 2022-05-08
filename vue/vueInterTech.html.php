@@ -6,16 +6,16 @@
 	<link href="../css/css.css" rel="stylesheet" type="text/css">
 </head>
 
-<h3>Voire les Interventions</h3>
+<h3>Voire vos Interventions</h3>
 <br />
 <br />
 <?php
-include '../modele/bdd.con.php';
-
 session_start();
 $mat = $_SESSION['mat'];
 
-$table = mysqli_query ($mysqli, "SELECT intervention.NumeroIntervention AS NumeroIntervention, NumeroClient, DateVisite, HeureDebVisite, HeureFinVisite, Etat, NumeroDeSerie, Commentaire FROM intervention, controler WHERE intervention.NumeroIntervention = controler.NumeroIntervention AND matricule = '$mat'");
+include '../modele/bdd.con.php';
+
+$table = mysqli_query ($mysqli, "SELECT intervention.NumeroIntervention AS NumeroIntervention, intervention.NumeroClient, DateVisite, HeureDebVisite, HeureFinVisite, Etat, NumeroDeSerie, Commentaire FROM intervention, controler WHERE intervention.NumeroIntervention = controler.NumeroIntervention AND intervention.NumeroClient = client.NumeroClient AND matricule = '$mat' ORDER BY client.DistanceKm");
 
 echo "<table>";
 echo "<tr><th>N° de Fiche Intervention</th><th>N° de Fiche Client</th><th>Date</th><th>Heure de Debut</th><th>Heure de Fin</th><th>Id du Materiel</th><th>Avancement</th><th>Commentaire</th><th>Modifier l'Intervention</th><th>Générer un Pdf</th></tr>";
